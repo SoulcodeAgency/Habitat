@@ -17,16 +17,20 @@ variables:
 steps:
 - task: NuGetToolInstaller@0
 
+- task: NodeTool@0
+
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
 
-- task: VSBuild@1
+- task: Npm@1
   inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: install
 
-- powershell: ./build-and-publish.ps1
-  displayName: Build and Publish
+- task: Npm@1
+  inputs:
+    command: custom
+    customCommand: install -g gulp
+
+- task: Gulp@1
+
