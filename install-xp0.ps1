@@ -125,8 +125,8 @@ function Install-XP0SingleDeveloper {
         SqlAdminUser = $SqlAdminUser
         SqlAdminPassword = $SqlAdminPassword
         SolrUrl = $SolrUrl
-        SolrRoot = $SolrRoot
-        SolrService = $SolrService
+        #SolrRoot = $SolrRoot
+        #SolrService = $SolrService
         Prefix = $SolutionPrefix
         XConnectCertificateName = $XConnectSiteName
         IdentityServerCertificateName = $IdentityServerSiteName
@@ -143,6 +143,8 @@ function Install-XP0SingleDeveloper {
         ClientSecret = $IdentityClientSecret
         AllowedCorsOrigins = $IdentityAllowedCorsOrigins
         SitecoreAdminPassword = $SitecoreAdminPassword
+        InstallDir = $InstallDir
+        CertPath = $CertPath
     }
     try {
         Install-SitecoreConfiguration @singleDeveloperParams *>&1 | Tee-Object XP0-SingleDeveloper.log
@@ -181,9 +183,9 @@ function Add-AppPool-Membership {
     }
 }
 
-Import-SitecoreInstallFramework
-if (-not $SkipPrerequisites) {
-    Install-Prerequisites
-}
+#Import-SitecoreInstallFramework
+#if (-not $SkipPrerequisites) {
+#    Install-Prerequisites
+#}
 Install-XP0SingleDeveloper
 Add-AppPool-Membership

@@ -37,6 +37,8 @@ $uninstallParams = @{
     ClientSecret = $IdentityClientSecret
     AllowedCorsOrigins = $IdentityAllowedCorsOrigins
     SitecoreAdminPassword = $SitecoreAdminPassword
+    InstallDir = $InstallDir
+    CertPath = $CertPath
 }
 try {
     Uninstall-SitecoreConfiguration @uninstallParams *>&1 | Tee-Object XP0-SingleDeveloper-Uninstall.log
