@@ -1,0 +1,13 @@
+version: "3"
+services:
+  solr:
+    container_name: "habitat-solr"
+    image: solr:7.2.1-alpine
+    ports:
+      - "12000:8983"
+    volumes:
+      - habitat-data:/opt/solr/server/solr/mycores
+      - ./sitecore_configs:/opt/solr/server/solr/configsets/sitecore_configs:ro
+    restart: "always"
+volumes:
+  habitat-data:

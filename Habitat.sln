@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Foundation.SitecoreExtensions", "src\foundation\SitecoreExtensions\code\Sitecore.Foundation.SitecoreExtensions.csproj", "{B535703F-8D07-4F23-A533-2974BB4CC7B1}"
 EndProject
@@ -198,6 +198,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Feature.Accounts.Tests", "src\Feature\Accounts\Tests\Sitecore.Feature.Accounts.Tests.csproj", "{0049EB56-74D3-4F39-B0CE-2295E0747F09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Feature.Demo.Tests", "src\Feature\Demo\tests\Sitecore.Feature.Demo.Tests.csproj", "{0CF1F7D9-121A-4E40-844C-612EC40345F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bob", "Bob", "{85C7D08E-AA73-4CC0-B376-2EDD451B2B4E}"
+	ProjectSection(SolutionItems) = preProject
+		Bob.config = Bob.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -703,6 +708,7 @@ Global
 		{461905E3-1D1F-4A75-A4AF-0EFBC0B35F07} = {E0B40F60-22F9-4BF1-9611-0FFAB7A0728F}
 		{0049EB56-74D3-4F39-B0CE-2295E0747F09} = {C7886F90-3A67-4889-8ACC-F07D42CFDBF0}
 		{0CF1F7D9-121A-4E40-844C-612EC40345F5} = {434D5F70-8EA5-4441-963F-293AE1D2D403}
+		{85C7D08E-AA73-4CC0-B376-2EDD451B2B4E} = {F347A85D-6FF5-4927-B5CF-54D81954E6A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6822019A-56D3-4695-9B9E-96F9D10ECD75}

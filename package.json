@@ -26,8 +26,7 @@
     "xmlpoke": "^0.1.12",
     "yargs": "^6.4.0"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

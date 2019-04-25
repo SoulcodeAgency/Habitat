@@ -1,7 +1,10 @@
 # Solution parameters
 $SolutionPrefix = "habitat"
 $SitePostFix = "dev.local"
-$webroot = "C:\inetpub\wwwroot"
+#$webroot = "C:\inetpub\wwwroot"
+$InstallDir = "C:\web\"
+$webroot = "$InstallDir"
+$CertPath = "$SCInstallRoot\certificates"
 
 $SitecoreVersion = "9.1.0 rev. 001564"
 $IdentityServerVersion = "2.0.0 rev. 00157"
@@ -9,6 +12,7 @@ $InstallerVersion = "2.0.0"
 
 # Assets and prerequisites
 $AssetsRoot = "$PSScriptRoot\build\assets"
+$CertPath = "$AssetsRoot\certificates"
 $AssetsPSRepository = "https://sitecore.myget.org/F/sc-powershell/api/v2/"
 $AssetsPSRepositoryName = "SitecoreGallery"
 
@@ -30,7 +34,7 @@ $SingleDeveloperConfiguration = "$AssetsRoot\XP0-SingleDeveloper.json"
 # Sitecore Parameters
 $SitecorePackage = "$AssetsRoot\Sitecore $SitecoreVersion (OnPrem)_single.scwdp.zip"
 $SitecoreSiteName = "$SolutionPrefix.$SitePostFix"
-$SitecoreSiteUrl = "http://$SitecoreSiteName"
+$SitecoreSiteUrl = "https://$SitecoreSiteName"
 $SitecoreSiteRoot = Join-Path $webroot -ChildPath $SitecoreSiteName
 $SitecoreAdminPassword = "b"
 
@@ -42,13 +46,13 @@ $XConnectSiteRoot = Join-Path $webroot -ChildPath $XConnectSiteName
 
 # Identity Server Parameters
 $IdentityServerSiteName = "${SolutionPrefix}_IdentityServer.$SitePostFix"
-$IdentityServerUrl = "https://$IdentityServerName"
+$IdentityServerUrl = "https://$IdentityServerSiteName"
 $IdentityServerPackage = "$AssetsRoot\Sitecore.IdentityServer $IdentityServerVersion (OnPrem)_identityserver.scwdp.zip"
 $IdentityClientSecret = "SPDHZpF6g8EXq5F7C5EhPQdsC1UbvTU3"
 $IdentityAllowedCorsOrigins = $SitecoreSiteUrl
 $IdentityServerSiteRoot = Join-Path $webroot -ChildPath $IdentityServerSiteName
 
 # Solr Parameters
-$SolrUrl = "https://localhost:8983/solr"
+$SolrUrl = "https://localhost:12000/solr"
 $SolrRoot = "c:\\solr"
 $SolrService = "Solr"
